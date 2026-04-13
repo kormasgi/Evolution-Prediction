@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    background-color: black;
+}
+
+.globalWarming,
+.AITakeover {
+    display: none;
+}
+
+label{
+    font-size: 50px;
+    color: white;
+    border: 5px solid rgb(40, 40, 40);
+    padding: 5px 10px;
+    border-radius: 15px;
+    background-color: rgb(22, 22, 22);
+    transition: all 0.4s;
+}
+
+label:hover{
+    text-shadow:  1px 1px black;
+    color: rgb(255, 255, 255);
+    background-color: rgb(50, 50, 50);
+    border: 5px solid rgba(30, 30, 30, 0.4);
+}
+
+input:checked + label{
+    text-shadow:  3px 3px black;
+    color: rgb(255, 255, 255);
+    background-color: rgb(60, 60, 60);
+    border: 5px solid rgba(30, 30, 30);
+}
+
+.submitButton{
+    font-size: 50px;
+    border: 5px solid blue;
+    padding: 5px 10px;
+    border-radius: 15px;
+    background-color: blue;
+}
+
+header{
+    width: 100%;
+    font-size: 50px;
+    height: 250px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background-color: rgb(23, 38, 38);
+}
+
+p {
+    font-size: 50px;
+    color: white;
+}
+
+.timeInput{
+    width: 200px;
+    height: 50px;
+    font-size: 30px;
+    border-radius: 10px;
+}

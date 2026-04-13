@@ -3,9 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <title>Evolution Prediction</title>
 </head>
 <body>
+    <header>
+        <h1>Evolution Prediction</h1>
+    </header>
+
+    <form action = "javascript:assignfullyears();">
+
+        <input id = "globalWarming" class = "globalWarming" type = "checkbox">
+        <label for = "globalWarming">Global Warming</label>
+        
+        <input id = "AITakeover" class = "AITakeover" type = "checkbox">
+        <label for = "AITakeover">AI Takeover</label>
+
+        <p>In how many years?</p>
+        <input type = "number" id = "time" class = "timeInput">
+
+        <br>
+        <br>
+        <input type = "submit" class = "submitButton"">
+
+    </form>
+
     
 </body>
 </html>
