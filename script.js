@@ -9,6 +9,7 @@ oxegenLevel = 20.9;
 carbonDioxideLevel = 0.042;
 solarRadiation = 290;
 
+const allEP = [temperature, seaLevel, mutationRate, population, migrationRate, habitatRate, hungerRate, oxegenLevel, carbonDioxideLevel, solarRadiation]
 const allEPN = ["temperature", "seaLevel", "mutationRate", "population", "migrationRate", "habitatRate", "hungerRate", "oxegenLevel", "carbonDioxideLevel", "solarRadiation"]
 const allEPA = ["temperature", "seaLevel", "mutationRate", "population", "migrationRate", "habitatRate", "hungerRate", "oxegenLevel", "carbonDioxideLevel", "solarRadiation"]
 
@@ -52,7 +53,9 @@ function assignallEPA(){
         if (allEPA[l] == allEPN[l]){
             allEPA.splice(l, 1)
             allEPN.splice(l, 1)
-            l = l - 1
+            allEP.splice(l, 1)
+            l = l - 1;
+            console.log("EP: " + allEP)
         }
     }
     assignFV()
@@ -60,7 +63,9 @@ function assignallEPA(){
 
 function assignFV(){
     for (let i = 0; i < allEPA.length; i++){
-        allEPA[i] = allEPA[i] * time
+        allEPA[i] = allEPA[i] * time + allEP[i]
     }
-    console.log(allEPA)
+    console.log("EPA: " + allEPA)
+    console.log("EPN: " + allEPN)
+    console.log("EP: " + allEP)
 }

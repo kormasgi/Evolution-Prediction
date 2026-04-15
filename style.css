@@ -31,7 +31,7 @@ label:hover{
 }
 
 input:checked + label{
-    text-shadow:  3px 3px black;
+    text-shadow: 3px 3px black;
     color: rgb(255, 255, 255);
     background-color: rgb(60, 60, 60);
     border: 5px solid rgba(30, 30, 30);
