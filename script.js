@@ -24,12 +24,15 @@ full = []
 function assignfullyears(){
     full = []
     for (let key in EPE){
-        if (document.getElementById(key).checked == true){
+        if (document.getElementById(key).checked){
             full.push(EPE[key])
         }
     }
     time = document.getElementById("time").value / 10;
     console.log(time)
+    if (time == 6.7) {
+        document.getElementById("bruh").style.display = "block";
+    }
     assignallEPA()
 }
 
@@ -55,7 +58,6 @@ function assignallEPA(){
             allEPN.splice(l, 1)
             allEP.splice(l, 1)
             l = l - 1;
-            console.log("EP: " + allEP)
         }
     }
     assignFV()
@@ -68,4 +70,25 @@ function assignFV(){
     console.log("EPA: " + allEPA)
     console.log("EPN: " + allEPN)
     console.log("EP: " + allEP)
+    scale()
+}
+
+function scale(){
+    for (let i = 0; i < allEPA.length; i++){
+        if ("temperature" == allEPN[i]){
+            if (allEPA[i] > 70) {
+                temperature = "very hot"
+            }
+            else if (allEPA[i] > 60 && allEPA[i] < 70) {
+                temperature = "moderate temperature"
+            }
+            else if (allEPA[i] < 50 && allEPA[i] > 40) {
+                temperature = "cool"
+            }
+            else if (allEPA[i] < 40) {
+                temperature = "very cold"
+            }
+            document.getElementById("summary").innerHTML = "• In " + time*10 + " years, it will be " + temperature + ". <br> • It will be " + allEPA[0] + " degrees Fahrenheit."
+        }
+    }
 }

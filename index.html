@@ -12,6 +12,10 @@
         <h1>Evolution Prediction</h1>
     </header>
 
+    <div class = "hidden" id = "bruh">
+        <p>JIT STOP THE 67!</p>        
+    </div>
+
     <form action = "javascript:assignfullyears();">
 
         <input id = "globalWarming" class = "globalWarming" type = "checkbox">
@@ -29,6 +33,21 @@
 
     </form>
 
-    
+    <p id = "summary" style = "color: white"></p>
+
+    <div id = "termsConditions" class = "termsConditions">
+        <div class = "termsConditionsTitle">
+            <h2>Terms & Conditions</h2>
+        </div>
+        <div class = "termsConditionsText">
+            <p class = "termsConditionsTextP">
+                By pressing I Agree, you acknowledge that you have read and understood the terms and conditions of this website. <br> Evolution is still a theory, and the predictions made by this website are not guaranteed to be accurate. <br> The creators of this website are not responsible for any consequences that may arise from the use of this website or the predictions made by it. <br> This website is for entertainment purposes only, not for scientific research or decision-making. This website and the information it contains are not proven, and should not be taken as fact. This website is not intended to be used for medical, legal, or financial advice. <br> By using this website, you agree to indemnify and hold harmless the creators of this website from any claims, damages, or expenses that may arise from your use of this website or the predictions made by it. <br> Evolution Prediction is not responsible for any errors or inaccuracies in the predictions made by this website, and you should not rely on them for any purpose. Evolution Prediction is not responsible for any damage, loss, or injury that may result from the use of this website or the predictions made by it. <br> All code used in Evolution Prediction property of the creators, and not to be copied without direct permission. <br> This website is not a credible source. <br> By using this website, you agree to these terms and conditions. If you do not agree to these terms and conditions, please do not use this website.
+            </p>
+        </div>
+        <div class = "buttons">
+            <button id = "agreeButton" class = "agreeButton" onclick = "document.getElementById('termsConditions').style.display = 'none'; document.body.style.overflow = 'auto';">I Agree</button>
+            <button id = "disagreeButton" class = "disagreeButton" onclick = "window.close()">I Disagree</button>
+        </div>
+    </div>
 </body>
 </html>
