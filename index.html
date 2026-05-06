@@ -1,53 +1,82 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
     <title>Evolution Prediction</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
+
 <body>
-    <header>
-        <h1>Evolution Prediction</h1>
-    </header>
 
-    <div class = "hidden" id = "bruh">
-        <p>JIT STOP THE 67!</p>        
+<header>
+    <h1>Evolution Prediction</h1>
+</header>
+
+<div id="bruh" style="display:none;">
+    <p>JIT STOP THE 67!</p>
+</div>
+
+<form action="javascript:assignfullyears();">
+    <input id="globalWars" class="checkbox" type="checkbox">
+    <label for="globalWars">World Wars</label>
+
+    <input id="aiTakeover" class="checkbox" type="checkbox">
+    <label for="aiTakeover">AI Takeover</label>
+
+    <input id="climateCrisis" class="checkbox" type="checkbox">
+    <label for="climateCrisis">Global Warming</label>
+
+    <input id="globalPandemic" class="checkbox" type="checkbox">
+    <label for="globalPandemic">Global Pandemic</label>
+
+    <input id="nuclearDisaster" class="checkbox" type="checkbox">
+    <label for="nuclearDisaster">Nuclear Disaster</label>
+
+    <input id="spaceExpansion" class="checkbox" type="checkbox">
+    <label for="spaceExpansion">Space Expansion</label>
+
+    <input id="geneEditingBoom" class="checkbox" type="checkbox">
+    <label for="geneEditingBoom">Rewriting DNA</label>
+
+    <input id="extremeTechAddiction" class="checkbox" type="checkbox">
+    <label for="extremeTechAddiction">Extreme Tech Addiction</label>
+
+    <input id="foodShortage" class="checkbox" type="checkbox">
+    <label for="foodShortage">Food Shortage</label>
+
+    <input id="waterShortage" class="checkbox" type="checkbox">
+    <label for="waterShortage">Water Shortage</label>
+
+    <input id="naturalDisasters" class="checkbox" type="checkbox">
+    <label for="naturalDisasters">Natural Disasters</label>
+
+    <input id="overpopulation" class="checkbox" type="checkbox">
+    <label for="overpopulation">Overpopulation</label>
+
+    <input id="economicCollapse" class="checkbox" type="checkbox">
+    <label for="economicCollapse">Economic Collapse</label>
+
+    <input id="helpingEarth" class="checkbox" type="checkbox">
+    <label for="helpingEarth">Helping Earth</label>
+
+    <input id="newEraLearning" class="checkbox" type="checkbox">
+    <label for="newEraLearning">New Era of Learning</label>
+    <br>
+
+    <div class="timeForm">
+    <p>In how many years?</p>
+
+    <input type="number" id="time" class="timeInput">
+    
+    <br><br>
+
+    <input type="submit" class="submitButton">
     </div>
+</form>
 
-    <form action = "javascript:assignfullyears();">
+<p id="summary"></p>
 
-        <input id = "globalWarming" class = "globalWarming" type = "checkbox">
-        <label for = "globalWarming">Global Warming</label>
-        
-        <input id = "AITakeover" class = "AITakeover" type = "checkbox">
-        <label for = "AITakeover">AI Takeover</label>
-
-        <p>In how many years?</p>
-        <input type = "number" id = "time" class = "timeInput">
-
-        <br>
-        <br>
-        <input type = "submit" class = "submitButton"">
-
-    </form>
-
-    <p id = "summary" style = "color: white"></p>
-
-    <div id = "termsConditions" class = "termsConditions">
-        <div class = "termsConditionsTitle">
-            <h2>Terms & Conditions</h2>
-        </div>
-        <div class = "termsConditionsText">
-            <p class = "termsConditionsTextP">
-                By pressing I Agree, you acknowledge that you have read and understood the terms and conditions of this website. <br> Evolution is still a theory, and the predictions made by this website are not guaranteed to be accurate. <br> The creators of this website are not responsible for any consequences that may arise from the use of this website or the predictions made by it. <br> This website is for entertainment purposes only, not for scientific research or decision-making. This website and the information it contains are not proven, and should not be taken as fact. This website is not intended to be used for medical, legal, or financial advice. <br> By using this website, you agree to indemnify and hold harmless the creators of this website from any claims, damages, or expenses that may arise from your use of this website or the predictions made by it. <br> Evolution Prediction is not responsible for any errors or inaccuracies in the predictions made by this website, and you should not rely on them for any purpose. Evolution Prediction is not responsible for any damage, loss, or injury that may result from the use of this website or the predictions made by it. <br> All code used in Evolution Prediction property of the creators, and not to be copied without direct permission. <br> This website is not a credible source.
-            </p>
-        </div>
-        <div class = "buttons">
-            <button id = "agreeButton" class = "agreeButton" onclick = "document.getElementById('termsConditions').style.display = 'none'; document.body.style.overflow = 'auto';">I Agree</button>
-            <button id = "disagreeButton" class = "disagreeButton" onclick = "window.close()">I Disagree</button>
-        </div>
-    </div>
 </body>
 </html>
